@@ -48,6 +48,10 @@
         a {
         	color: #e3e094;
         }
+        a:hover { 
+    		background-color: #e3e094;
+    		color: #505595;
+		}
   		.navbar {
     		margin-bottom: 0;
     		background-color: #505595;
@@ -83,7 +87,7 @@
   		}
 		.logo-small {
       		color: #e3e094;
-      		font-size: 64px;
+      		font-size: 16px;
   		}
   		.logo {
       		color: #e3e094;
@@ -225,9 +229,9 @@
     	<div class="col-sm-8">
       		<h2>About Me</h2>
       		<h4>I am a software engineer, data scientist, and music producer based in Fort Collins, Colorado.</h4>      
-      		<p>Check out my résumé for more information:</p>
-            <a href="docs/resume.pdf" class="btn btn-default btn-lg">See Résumé</a>
-      		<!-- <button class="btn btn-default btn-lg">See Résumé</button> -->
+      		<p>Check out my resume for more information:</p>
+            <a href="docs/resume.pdf" class="btn btn-default btn-lg">See Resume</a>
+      		<!-- <button class="btn btn-default btn-lg">See Resume</button> -->
     	</div>
     	<div class="col-sm-4">
       		<span class="glyphicon glyphicon-fire logo slideanim"></span>
@@ -241,34 +245,34 @@
     <br>
     <div class="row">
         <div class="col-sm-4">
-        	<span class="glyphicon glyphicon-off"></span>
+        	<span class="glyphicon glyphicon-off logo-small"></span>
         	<h4>SOFTWARE ENGINEERING</h4>
         	<p>Specializing in Java, with extensive experience in Python and C++</p>
       	</div>
 		<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-signal"></span>
+      		<span class="glyphicon glyphicon-signal logo-small"></span>
       		<h4>DATA SCIENCE & DSP</h4>
       		<p>From biometric signals to traffic times, data is my speciality</p>
     	</div>
     	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-stats"></span>
+      		<span class="glyphicon glyphicon-stats logo-small"></span>
       		<h4>AUDIO ENGINEERING</h4>
       		<p>Processing, feature extraction, and sound design</p>
     	</div>
     </div>
     <div class="row">
     	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-certificate"></span>
+      		<span class="glyphicon glyphicon-certificate logo-small"></span>
       		<h4>CLIENT RELATIONS</h4>
       		<p>I believe great products start with knowing your customer</p>
     	</div>
     	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-blackboard"></span>
+      		<span class="glyphicon glyphicon-blackboard logo-small"></span>
       		<h4>DESIGN</h4>
       		<p>2D graphic, 3D model and Web/UI design</p>
     	</div>
     	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-edit"></span>
+      		<span class="glyphicon glyphicon-edit logo-small"></span>
       		<h4>TECHNICAL WRITING</h4>
       		<p>Project proposals, project summaries, user manuals, etc.</p>
     	</div>
@@ -311,16 +315,16 @@
 <div id="contact" class="container-fluid text-left bg-grey">
 	<h2>CONTACT</h2>
   	<div class="row">
-    	<div class="col-sm-5">
+    	<div class="col-sm-6">
       		<p>Drop me a note:</p>
-      		<p><span class="glyphicon glyphicon-map-marker"></span> Fort Collins, US</p>
-      		<p><span class="glyphicon glyphicon-envelope"></span> martinez.marco567@gmail.com</p>
+      		<p><span class="glyphicon glyphicon-map-marker logo-small"></span> Fort Collins, US</p>
+      		<p><span class="glyphicon glyphicon-envelope logo-small"></span> martinez.marco567@gmail.com</p>
     	</div>
-    	<div class="col-sm-7 slideanim">
+    	<div class="col-sm-6 slideanim">
         	<form action="https://formspree.io/martinez.marco567@gmail.com" method="POST">
 				<input type="hidden" name="_subject" value="New Contact from Your Personal Web Page"/>
 				<input type="hidden" name="_format" value="plain"/>
-				<input type="hidden" name="_next" value="//Funkatronics.github.io/TactileWaves/web/thankyou.html"/>
+				<input type="hidden" name="_next" value="thankyou.html"/>
 				<div class="row">
 					<div class="col-sm-6 form-group">
 						<input class="form-control" name="name" placeholder="Name" type="text" required autofocus/>
