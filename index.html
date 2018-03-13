@@ -7,52 +7,71 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet" type="text/css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<style>
+    	html {
+    		font-size = 100%;
+        }
   		body {
-      	font: 400 15px Lato, sans-serif;
-      	line-height: 1.8;
-      	color: #818181;
+        	font-size = 0.625em;
+      		font: Roboto;
+      		line-height: 1.8;
+    		background-color: #505050;
+      		color: #e3e094;
   		}
   		h2 {
-      	font-size: 24px;
-      	text-transform: uppercase;
-      	color: #303030;
-      	font-weight: 600;
-      	margin-bottom: 30px;
+      		font-size: 2.4em;
+      		text-transform: uppercase;
+      		color: #e3e094;
+      		font-weight: 600;
+      		margin-bottom: 30px;
+  		}
+        h3 {
+      		font-size: 2em;
+      		font-weight: 400;
+      		margin-bottom: 25px;
   		}
   		h4 {
-      	font-size: 19px;
-      	line-height: 1.375em;
-      	color: #303030;
-      	font-weight: 400;
-      	margin-bottom: 30px;
+      		font-size: 1.8em;
+      		line-height: 1.375em;
+      		color: #fff;
+      		font-weight: 200;
+      		margin-bottom: 35px;
   		} 
+        p {
+        	font-size: 1.4em;
+            color: #fff;
+      		margin-bottom: 25px;
+        }
+        a {
+        	color: #e3e094;
+        }
   		.navbar {
     		margin-bottom: 0;
-    		background-color: #3bceae;
+    		background-color: #505595;
     		z-index: 9999;
     		border: 0;
-    		font-size: 12px !important;
+    		font-size: 1.2em !important;
     		line-height: 1.42857143 !important;
     		letter-spacing: 4px;
     		border-radius: 0;
 		}
 		.navbar li a, .navbar .navbar-brand {
-    		color: #fff !important;
+    		color: #e3e094 !important;
 		}
 		.navbar-nav li a:hover, .navbar-nav li.active a {
-    		color: #3bceae !important;
-    		background-color: #fff !important;
+    		color: #505595 !important;
+    		background-color: #e3e094 !important;
 		}
 		.navbar-default .navbar-toggle {
     		border-color: transparent;
-    		color: #fff !important;
+    		color: #e3e094 !important;
 		}
 		.jumbotron { 
-    		background-color: #3bceae; /* Teal */
-      		color: #000;
+    		background-color: #505595;
+      		color: #e3e094;
       		padding: 100px 25px;
       		font-family: Montserrat, sans-serif;
 		}
@@ -60,18 +79,19 @@
       		padding: 60px 50px;
   		}
   		.bg-grey {
-      		background-color: #f6f6f6;
+      		background-color: #505050;
   		}
 		.logo-small {
-      		color: #3bceae;
-      		font-size: 50px;
+      		color: #e3e094;
+      		font-size: 64px;
   		}
   		.logo {
-      		color: #3bceae;
+      		color: #e3e094;
       		font-size: 200px;
   		}
   		.thumbnail {
       		padding: 10px 10px 15px 10px;
+    		background-color: #505595;
       		border: none;
       		border-radius: 0;
   		}
@@ -83,7 +103,7 @@
     	footer .glyphicon {
     		font-size: 20px;
     		margin-bottom: 20px;
-    		color: #3bceae;
+    		color: #e3e094;
 		}
     	.slideanim {visibility:hidden;}
 		.slide {
@@ -117,6 +137,14 @@
         		opacity: 1;
         		-webkit-transform: translateY(0%);
     		}
+		}
+    	@media screen and (min-width: 768px) {
+        	.container {
+   				max-width: 850px;
+  			}
+			.container-fluid {
+   				max-width: 850px;
+  			}
 		}
     	@media screen and (max-width: 768px) {
     		.col-sm-4 {
@@ -159,9 +187,9 @@
   	</div>
 </nav>
 
-<div class="jumbotron text-center" style="background-color: #f4d142; padding: 75px 25px 25px;">
+<div class="jumbotron text-center" style="background-color: #f4d142; color: #000; padding: 75px 25px 25px;">
 	<span class="glyphicon glyphicon-alert" style="font-size: 30px"></span>
-    <h4>This site is currently under construction</h4> 
+    <h4 style="color: #000;">This site is currently under construction</h4> 
     <h5>I appreciate your patience as I build my new domain</h5>
 </div>
 
@@ -170,6 +198,7 @@
     	<h1>Marco Martinez</h1>
     	<p>Engineer, Artist, Musician, Galactic Entrepreneur</p> 
   	</div>
+    <!--
   	<div class="row">
     	<div class="col-sm-4">
       		<h3>Software</h3>
@@ -187,16 +216,18 @@
       		<p>Resume coming soon.</p>
     	</div>
   	</div>
+    -->
 </div>
 
-<!-- About Section -->
+<!-- About -->
 <div id="about" class="container-fluid">
 	<div class="row">
     	<div class="col-sm-8">
       		<h2>About Me</h2>
       		<h4>I am a software engineer, data scientist, and music producer based in Fort Collins, Colorado.</h4>      
-      		<p>With a degree in Mechanical Engineering</p>
-      		<button class="btn btn-default btn-lg">See Resume</button>
+      		<p>Check out my résumé for more information:</p>
+            <a href="docs/resume.pdf" class="btn btn-default btn-lg">See Résumé</a>
+      		<!-- <button class="btn btn-default btn-lg">See Résumé</button> -->
     	</div>
     	<div class="col-sm-4">
       		<span class="glyphicon glyphicon-fire logo slideanim"></span>
@@ -204,18 +235,46 @@
   	</div>
 </div>
 
-<div class="container-fluid bg-grey">
-	<div class="row">
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-globe logo slideanim"></span>
+<!-- Skills -->
+<div id="skills" class="container-fluid text-center">
+    <h2>Technical Skills</h2>
+    <br>
+    <div class="row">
+        <div class="col-sm-4">
+        	<span class="glyphicon glyphicon-off"></span>
+        	<h4>SOFTWARE ENGINEERING</h4>
+        	<p>Specializing in Java, with extensive experience in Python and C++</p>
+      	</div>
+		<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-signal"></span>
+      		<h4>DATA SCIENCE & DSP</h4>
+      		<p>From biometric signals to traffic times, data is my speciality</p>
     	</div>
-    	<div class="col-sm-8">
-      		<h2>Our Values</h2>
-      		<h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>      
-      		<p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-stats"></span>
+      		<h4>AUDIO ENGINEERING</h4>
+      		<p>Processing, feature extraction, and sound design</p>
+    	</div>
+    </div>
+    <div class="row">
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-certificate"></span>
+      		<h4>CLIENT RELATIONS</h4>
+      		<p>I believe great products start with knowing your customer</p>
+    	</div>
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-blackboard"></span>
+      		<h4>DESIGN</h4>
+      		<p>2D graphic, 3D model and Web/UI design</p>
+    	</div>
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-edit"></span>
+      		<h4>TECHNICAL WRITING</h4>
+      		<p>Project proposals, project summaries, user manuals, etc.</p>
     	</div>
   	</div>
 </div>
+
 
 <!-- Portfolio -->
 <div id="portfolio" class="container-fluid bg-grey">
@@ -227,6 +286,7 @@
         		<span class="glyphicon glyphicon-flash logo"></span>
         		<p><strong>Tactile Waves</strong></p>
         		<p>Sound-to-touch Java Library</p>
+                <p>Available <a href="https://funkatronics.github.io/TactileWaves/">here</a></p>
       		</div>
     	</div>
     	<div class="col-sm-4">
@@ -234,13 +294,14 @@
       			<span class="glyphicon glyphicon-headphones logo"></span>
         		<p><strong>Music</strong></p>
         		<p>Funky Disco House</p>
+                <p>Check it out on <a href="https://soundcloud.com/funk4science">soundcloud</a></p>
       		</div>
     	</div>
     	<div class="col-sm-4">
       		<div class="thumbnail">
       			<span class="glyphicon glyphicon-question-sign logo"></span>
         		<p><strong>Coming soon</strong></p>
-        		<p>I promise</p>
+                <p style="padding: 40px 0px">I promise</p>
       		</div>
     	</div>
 	</div>
@@ -253,23 +314,29 @@
     	<div class="col-sm-5">
       		<p>Drop me a note:</p>
       		<p><span class="glyphicon glyphicon-map-marker"></span> Fort Collins, US</p>
-      		<p><span class="glyphicon glyphicon-envelope"></span> funkatronicsmail@gmail.com</p>
+      		<p><span class="glyphicon glyphicon-envelope"></span> martinez.marco567@gmail.com</p>
     	</div>
     	<div class="col-sm-7 slideanim">
-      		<div class="row">
-        		<div class="col-sm-6 form-group">
-          			<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        		</div>
-        		<div class="col-sm-6 form-group">
-          			<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        		</div>
-      		</div>
-      		<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      		<div class="row">
-        		<div class="col-sm-12 form-group">
-          			<button class="btn btn-default pull-right" type="submit">Send</button>
-        		</div>
-      		</div>
+        	<form action="https://formspree.io/martinez.marco567@gmail.com" method="POST">
+				<input type="hidden" name="_subject" value="New Contact from Your Personal Web Page"/>
+				<input type="hidden" name="_format" value="plain"/>
+				<input type="hidden" name="_next" value="//Funkatronics.github.io/TactileWaves/web/thankyou.html"/>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<input class="form-control" name="name" placeholder="Name" type="text" required autofocus/>
+					</div>
+					<div class="col-sm-6 form-group">
+						<input class="form-control" name="email" placeholder="Email" type="email" required/>
+					</div>
+				</div>
+				<textarea class="form-control" name="comments" placeholder="Comment" rows="5" required></textarea>
+				<br>
+				<div class="row">
+					<div class="col-sm-12 form-group">
+						<input class="btn btn-default pull-right" type="submit" value="Send">
+					</div>
+				</div>
+			</form>
     	</div>
   	</div>
 </div>
@@ -319,3 +386,4 @@
 
 </body>
 </html>
+
