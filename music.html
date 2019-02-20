@@ -38,7 +38,6 @@
       		line-height: 1.375em;
       		color: #fff;
       		font-weight: 200;
-      		margin-bottom: 35px;
   		} 
         p {
         	font-size: 1.4em;
@@ -46,7 +45,7 @@
       		margin-bottom: 25px;
         }
         a {
-        	color: #e3e094;
+        	color: #fff;
         }
         a:hover { 
     		background-color: #e3e094;
@@ -76,15 +75,35 @@
 		.jumbotron { 
     		background-color: #505595;
       		color: #e3e094;
-      		padding: 100px 25px;
+      		padding: 64px 25px 24px 25px;
       		font-family: Montserrat, sans-serif;
 		}
   		.container-fluid {
       		padding: 60px 50px;
   		}
+        .col-sm-3 {
+   			vertical-align: middle;
+   			display: inline-block;
+   			float: none;
+		}
   		.bg-grey {
       		background-color: #505050;
   		}
+        .embed-container {
+    		position: relative;
+    		overflow: hidden;
+    		max-width: 100%;
+    		height: auto;
+		}
+    	.embed-container iframe,
+    	.embed-container object,
+    	.embed-container embed {
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	width: 100%;
+        	height: 100%;
+    	}
 		.logo-small {
       		color: #e3e094;
       		font-size: 16px;
@@ -98,7 +117,7 @@
       		padding: 10px 10px 15px 10px;
     		background-color: #505595;
       		border: none;
-      		border-radius: 7px;
+      		border-radius: 0;
   		}
   		.thumbnail img {
       		width: 100%;
@@ -152,17 +171,13 @@
   			}
 		}
     	@media screen and (max-width: 768px) {
-    		.col-sm-4 {
-      			text-align: center;
-      			margin: 25px 0;
-    		}
     		.btn-lg {
         		width: 100%;
         		margin-bottom: 35px;
     		}
   		}
   		@media screen and (max-width: 480px) {
-    		.logo {
+        	.logo {
         		font-size: 150px;
     		}
   		}
@@ -186,167 +201,81 @@
         		<li><a href="index.html">HOME</a></li>
         		<li><a href="music.html">MUSIC</a></li>
         		<li><a href="#portfolio">PORTFOLIO</a></li>
-        		<li><a href="#contact">CONTACT</a></li>
+        		<li><a href="index.html#contact">CONTACT</a></li>
       		</ul>
     	</div>
   	</div>
 </nav>
 
-<!-- -->
+<!--
 <div class="jumbotron text-center" style="background-color: #f4d142; color: #000; padding: 75px 25px 25px;">
 	<span class="glyphicon glyphicon-alert" style="font-size: 30px"></span>
     <h4 style="color: #000;">This site is currently under construction</h4> 
-    <h5>I appreciate your patience as I update my domain</h5>
+    <h5>I appreciate your patience as I build my new domain</h5>
 </div>
+-->
 
 <div class="container">
   	<div class="jumbotron text-center">
-    	<h1>Marco Martinez</h1>
-    	<p>Engineer, Artist, Musician, Galactic Entrepreneur</p> 
-  	</div>
-    <!--
-  	<div class="row">
-    	<div class="col-sm-4">
-      		<h3>Software</h3>
-      		<p>I specialize in DSP software design and data science, particularly in the field of sound-to-touch sensory substitution.</p>
-      		<p>See my Java library for tactile audio <a href="https://funkatronics.github.io/TactileWaves/">here</a>.</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<h3>Music</h3>
-      		<p>I write, compose, and produce funky Disco/French House music under the moniker <i>Funkatronics.</i></p>
-      		<p>Check it out on <a href="https://soundcloud.com/funk4science">soundcloud</a>.</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<h3>Credentials & Contact</h3>        
-      		<p>funkatronicsmail@gmail.com</p>
-      		<p>Resume coming soon.</p>
-    	</div>
-  	</div>
-    -->
-</div>
-
-<!-- About -->
-<div id="about" class="container-fluid">
-	<div class="row">
-    	<div class="col-sm-8">
-      		<h2>About Me</h2>
-      		<h4>I am an audio/software engineer, data scientist, and music producer based in Denver, Colorado.</h4>      
-      		<p>Check out my resume for more information:</p>
-            <a href="docs/resume.pdf" class="btn btn-default btn-lg">See Resume</a>
-      		<!-- <button class="btn btn-default btn-lg">See Resume</button> -->
-    	</div>
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-fire logo slideanim"></span>
-    	</div>
-  	</div>
-</div>
-
-<!-- Skills -->
-<div id="skills" class="container-fluid text-center">
-    <h2>Technical Skills</h2>
-    <br>
-    <div class="row">
-        <div class="col-sm-4">
-        	<span class="glyphicon glyphicon-off logo-small"></span>
-        	<h4>SOFTWARE ENGINEERING</h4>
-        	<p>Specializing in Java, with extensive experience in Python, JavaScript and C++</p>
-      	</div>
-		<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-signal logo-small"></span>
-      		<h4>DATA SCIENCE & DSP</h4>
-      		<p>From biometric signals to traffic times, data is my speciality</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-stats logo-small"></span>
-      		<h4>AUDIO ENGINEERING</h4>
-      		<p>Processing, feature extraction, and sound design</p>
-    	</div>
+    	<img src="res/funkatronics.png" width="100%" alt="Funkatronics" style="background: #000; padding: 15px; border-radius: 15px">
+    	<h4>Funky Disco House Music</h4>
+    	<p>Available on all major streaming platforms</p> 
+        
+    	<div class="row" style="background: #525584; border: 1px solid #e3e094; border-radius: 7px; padding: 10px; margin: 0 10px">
+    		<div class="col-sm-3">
+        		<!-- Spotify -->
+                <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:2dwk4UfQgkV9ed4Yr30eXS&size=detail&theme=dark&show-count=0" width="170" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden; margin: auto -50%" allowtransparency="true"></iframe>
+        
+        	</div>
+    		<div class="col-sm-3">
+        		<!-- SoundCloud -->
+        		<iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Ffunk4science&color=orange_white&size=56" style="width: 56px; height: 56px; margin: auto -50%"></iframe>
+        	</div>
+    		<div class="col-sm-3">
+        		<!-- Apple Music -->
+        		<a href="https://geo.itunes.apple.com/us/album/dnt4gtme-single/1453364169?mt=1&app=music" style="display:inline-block; overflow:hidden; background:url(https://tools.applemusic.com/en-us/badge-lrg.svg?releaseDate=2019-02-14&kind=album&bubble=apple_music) no-repeat center; width:170px; height:56px; margin: auto -50%"></a>
+        	</div>
+        	<div class="col-sm-3">
+            	<a href="https://distrokid.com/hyperfollow/funkatronics/dnt4gtme-2" style="display:inline-block; overflow:hidden; border: 1px solid; border-radius: 7px; background: #000; padding: 5px; font-size: 1.8em; margin: auto -50%">HyperFollow</a>
+        	</div>
     </div>
-    <div class="row">
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-certificate logo-small"></span>
-      		<h4>CLIENT RELATIONS</h4>
-      		<p>I believe great products start with knowing your customer</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-blackboard logo-small"></span>
-      		<h4 style="line-height: 2.75em;">DESIGN</h4>
-      		<p>2D graphic, 3D model and Web/UI design</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-edit logo-small"></span>
-      		<h4>TECHNICAL WRITING</h4>
-      		<p>Project proposals, project reporting, user manuals, etc.</p>
-    	</div>
+  	</div>
+</div>
+
+<!-- Singles -->
+<div id="singles" class="container-fluid">
+    <h2>Singles</h2>
+	<div class="col-sm-12 slideanim">
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/575436495&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/491899236&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413133729&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+  	</div>
+</div>
+
+<!-- Albums & EP's -->
+<div id="albums" class="container-fluid">
+	<h2>Albums and EP's</h2>
+	<div class="col-sm-12 slideanim">
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/362818547&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+  	</div>
+</div>
+
+<!-- Remixes -->
+<div id="remixes" class="container-fluid">
+	<h2>Remixes</h2>
+	<div class="col-sm-12 slideanim">
+    	<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/501178524&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
   	</div>
 </div>
 
 
-<!-- Portfolio -->
-<div id="portfolio" class="container-fluid bg-grey">
-	<h2>Portfolio</h2>
-  	<h4>My Creative Work</h4>
-  	<div class="row text-center slideanim">
-    	<div class="col-sm-4">
-      		<div class="thumbnail">
-        		<span class="glyphicon glyphicon-flash logo" style="margin: 0 -50%"></span>
-        		<p><strong>Tactile Waves</strong></p>
-        		<p>Sound-to-touch Java Library</p>
-                <p>Available <a href="https://funkatronics.github.io/TactileWaves/">here</a></p>
-      		</div>
-    	</div>
-    	<div class="col-sm-4">
-      		<div class="thumbnail">
-      			<span class="glyphicon glyphicon-headphones logo" style="margin: 0 -50%"></span>
-        		<p><strong>Music</strong></p>
-        		<p>Funky Disco House</p>
-                <p>Check it out on <a href="https://soundcloud.com/funk4science">soundcloud</a></p>
-      		</div>
-    	</div>
-    	<div class="col-sm-4">
-      		<div class="thumbnail">
-      			<span class="glyphicon glyphicon-wrench logo" style="margin: 0 -50%"></span>
-        		<p><strong>M4L Plugins</strong></p>
-                <p>Free plugins for Ableton Live </p>
-                <p>Download <a href="http://maxforlive.com/profile/user/Funkatronics">here</a></p>
-      		</div>
-    	</div>
-	</div>
-</div>
 
-<!-- Contact -->
-<div id="contact" class="container-fluid text-left bg-grey">
-	<h2><a name="contact"/>CONTACT</h2>
-  	<div class="row">
-    	<div class="col-sm-6">
-      		<p>Drop me a note:</p>
-      		<p><span class="glyphicon glyphicon-map-marker logo-small"></span> Denver, CO </p>
-      		<p><span class="glyphicon glyphicon-envelope logo-small"></span> martinez.marco567@gmail.com</p>
-    	</div>
-    	<div class="col-sm-6 slideanim">
-        	<form action="https://formspree.io/martinez.marco567@gmail.com" method="POST">
-				<input type="hidden" name="_subject" value="New Contact from Your Personal Web Page"/>
-				<input type="hidden" name="_format" value="plain"/>
-				<input type="hidden" name="_next" value="thankyou.html"/>
-				<div class="row">
-					<div class="col-sm-6 form-group">
-						<input class="form-control" name="name" placeholder="Name" type="text" required autofocus/>
-					</div>
-					<div class="col-sm-6 form-group">
-						<input class="form-control" name="email" placeholder="Email" type="email" required/>
-					</div>
-				</div>
-				<textarea class="form-control" name="comments" placeholder="Comment" rows="5" required></textarea>
-				<br>
-				<div class="row">
-					<div class="col-sm-12 form-group">
-						<input class="btn btn-default pull-right" type="submit" value="Send">
-					</div>
-				</div>
-			</form>
-    	</div>
-  	</div>
-</div>
+
+
+
+
+
+
 
 <footer class="container-fluid text-center">
 	<a href="#myPage" title="To Top">
