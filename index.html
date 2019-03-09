@@ -4,12 +4,13 @@
     <title>Marco Martinez</title>
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
   	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet" type="text/css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   	<style>
     	html {
     		font-size = 100%;
@@ -20,6 +21,17 @@
       		line-height: 1.8;
     		background-color: #505050;
       		color: #e3e094;
+  		}
+  		.bg-grey {
+      		background-color: #505050;
+  		}
+  		.bg-light-grey {
+      		background-color: #5e5e5e;
+  		}
+  		h1 {
+      		font-size: 3.6em;
+      		color: #e3e094;
+      		margin-top: 30px;
   		}
   		h2 {
       		font-size: 2.4em;
@@ -40,8 +52,11 @@
       		font-weight: 200;
       		margin-bottom: 35px;
   		} 
+  		h5, h6 {
+      		color: #fff;
+  		}
         p {
-        	font-size: 1.4em;
+        	/*font-size: 1.4em;*/
             color: #fff;
       		margin-bottom: 25px;
         }
@@ -50,7 +65,7 @@
         }
         a:hover { 
     		background-color: #e3e094;
-    		color: #505595;
+    		color: #232642;
 		}
   		.navbar {
     		margin-bottom: 0;
@@ -80,35 +95,82 @@
       		font-family: Montserrat, sans-serif;
 		}
   		.container-fluid {
-      		padding: 60px 50px;
+      		padding: 60px 60px;
   		}
-  		.bg-grey {
-      		background-color: #505050;
+  		.container-fluid-dialog {
+      		padding: 0px 15px;
   		}
-		.logo-small {
+        .const-height {
+        	line-height: 2.5ex;
+  			height: 5ex;
+  			overflow: hidden;
+            margin-bottom: 5px;
+		}
+        .btn {
+        	background-color: #e3e094;
+        	color: #232642;
+            border-color: #232642;
+        }
+        .btn:hover {
+        	background-color: #232642;
+        	color: #e3e094;
+        }
+        .logo-small {
       		color: #e3e094;
-      		font-size: 16px;
+      		font-size: 24px;
   		}
   		.logo {
       		color: #e3e094;
       		font-size: 180px;
             padding: 20px 20px;
   		}
-  		.thumbnail {
-      		padding: 10px 10px 15px 10px;
+        .card {
     		background-color: #505595;
-      		border: none;
-      		border-radius: 7px;
-  		}
-  		.thumbnail img {
-      		width: 100%;
-      		height: 100%;
-      		margin-bottom: 10px;
-  		}
-    	footer .glyphicon {
+            border: none;
+		}
+        .card-deck .btn {
+        	padding: 0;
+            text-align: inherit;
+        }
+        /*.modal.custom {
+    		outline: none;
+  			z-index: 100000;
+            margin: 75px auto;
+		}*/
+		.modal.custom .modal-dialog {
+    		margin: 75px auto;
+        	color: #232642;
+		}
+        .modal-body {
+        	background-color: #5e5e5e;
+        }
+        .modal-header{
+        	background-color: #232642;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border: none;
+        
+        }
+        .modal-title {
+        	color: #e3e094;
+        }
+        .close.custom {
+        	color: #e3e094;
+        }
+        .modal-footer {
+        	background-color: #232642;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: none;
+        }
+        .modal-content {
+        	border-radius: 7px;
+        	border: 2px;
+            border-color: #000;
+        }
+    	footer .fas {
     		font-size: 20px;
     		margin-bottom: 20px;
-    		color: #e3e094;
 		}
     	.slideanim {visibility:hidden;}
 		.slide {
@@ -121,8 +183,20 @@
     		/* Make the element visible */
     		visibility: visible; 
 		}
-
-		/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+		::-webkit-scrollbar {
+  			width: 10px;
+		}
+		::-webkit-scrollbar-track {
+        	background: #5e5e5e;
+  			box-shadow: inset 0 0 5px #505050; 
+  			border-radius: 10px;
+		}
+		::-webkit-scrollbar-thumb {
+  			background: #e3e094; 
+  			border-radius: 5px;
+		}
+		/* Go from 0% to 100% opacity (see-through) and specify the percentage 
+        from when to slide in the element along the Y-axis */
 		@keyframes slide {
     		0% {
         		opacity: 0;
@@ -143,14 +217,11 @@
         		-webkit-transform: translateY(0%);
     		}
 		}
-    	@media screen and (min-width: 768px) {
-        	.container {
-   				max-width: 850px;
-  			}
-			.container-fluid {
-   				max-width: 850px;
-  			}
-		}
+  		@media screen and (max-width: 576px) {
+    		.logo {
+        		font-size: 150px;
+    		}
+  		}
     	@media screen and (max-width: 768px) {
     		.col-sm-4 {
       			text-align: center;
@@ -161,167 +232,399 @@
         		margin-bottom: 35px;
     		}
   		}
-  		@media screen and (max-width: 480px) {
-    		.logo {
-        		font-size: 150px;
-    		}
-  		}
+		@media (min-width: 1200px) {
+            .card-deck {
+            	max-width: 1080px;
+            	float: none;
+            	margin: 0 auto;
+            }
+        }
 	</style>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-    	<div class="navbar-header">
-      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        		<span class="icon-bar"></span>  
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>                       
-      		</button>
-            <img src="res/MMLogo.png" height="48px" width="64px" />
-    	</div>
-    	<div class="collapse navbar-collapse" id="myNavbar">
-      		<ul class="nav navbar-nav navbar-right">
-        		<li><a href="index.html">HOME</a></li>
-        		<li><a href="music.html">MUSIC</a></li>
-        		<li><a href="#portfolio">PORTFOLIO</a></li>
-        		<li><a href="#contact">CONTACT</a></li>
-      		</ul>
-    	</div>
-  	</div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+	<a class="navbar-brand" href="#">
+		<img src="res/MMLogo.png" height="48px" alt="MM">
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav ml-auto">
+			<li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+			<li class="nav-item"><a href="#portfolio" class="nav-link">PORTFOLIO</a></li>
+			<li class="nav-item"><a href="#musicModal" data-toggle="modal" data-target="#musicModal" class="nav-link">MUSIC</a></li>
+			<li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
+		</ul>
+	</div>
 </nav>
 
-<!-- -->
-<div class="jumbotron text-center" style="background-color: #f4d142; color: #000; padding: 75px 25px 25px;">
-	<span class="glyphicon glyphicon-alert" style="font-size: 30px"></span>
-    <h4 style="color: #000;">This site is currently under construction</h4> 
-    <h5>I appreciate your patience as I update my domain</h5>
+<!-- Title -->
+<div class="jumbotron jumbotron-fluid text-center">
+	<div class="container">
+		<h1>Marco Martinez</h1> 
+		<h5>Engineer &#xB7; Artist &#xB7; Musician &#xB7; Galactic Entrepreneur</h5>
+	</div>
 </div>
 
-<div class="container">
-  	<div class="jumbotron text-center">
-    	<h1>Marco Martinez</h1>
-    	<p>Engineer, Artist, Musician, Galactic Entrepreneur</p> 
-  	</div>
-    <!--
-  	<div class="row">
-    	<div class="col-sm-4">
-      		<h3>Software</h3>
-      		<p>I specialize in DSP software design and data science, particularly in the field of sound-to-touch sensory substitution.</p>
-      		<p>See my Java library for tactile audio <a href="https://funkatronics.github.io/TactileWaves/">here</a>.</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<h3>Music</h3>
-      		<p>I write, compose, and produce funky Disco/French House music under the moniker <i>Funkatronics.</i></p>
-      		<p>Check it out on <a href="https://soundcloud.com/funk4science">soundcloud</a>.</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<h3>Credentials & Contact</h3>        
-      		<p>funkatronicsmail@gmail.com</p>
-      		<p>Resume coming soon.</p>
-    	</div>
-  	</div>
-    -->
+<!--
+<div class="jumbotron text-center" style="background-color: #f4d142; color: #000; padding: 75px 25px 25px;">
+	<span class="fas fa-exclamation-triangle" style="font-size: 64px"></span>
+    <h4 style="color: #000;">This site is currently under construction</h4> 
+    <h5 style="color: #000;">I appreciate your patience as I update my domain for 2019</h5>
 </div>
+-->
 
 <!-- About -->
-<div id="about" class="container-fluid">
+<div id="about" class="container-fluid bg-grey">
 	<div class="row">
     	<div class="col-sm-8">
       		<h2>About Me</h2>
       		<h4>I am an audio/software engineer, data scientist, and music producer based in Denver, Colorado.</h4>      
-      		<p>Check out my resume for more information:</p>
-            <a href="docs/resume.pdf" class="btn btn-default btn-lg">See Resume</a>
-      		<!-- <button class="btn btn-default btn-lg">See Resume</button> -->
+      		<h5>Check out my resume for more information:</h5>
+            <a href="docs/resume.pdf" class="btn btn-dark btn-lg">See Resume</a>
     	</div>
     	<div class="col-sm-4">
       		<span class="glyphicon glyphicon-fire logo slideanim"></span>
+            <span class="fas fa-flask logo slideanim"></span>
     	</div>
   	</div>
 </div>
 
 <!-- Skills -->
-<div id="skills" class="container-fluid text-center">
+<div id="skills" class="container-fluid text-center bg-light-grey">
     <h2>Technical Skills</h2>
     <br>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4 col-sm-6">
         	<span class="glyphicon glyphicon-off logo-small"></span>
-        	<h4>SOFTWARE ENGINEERING</h4>
-        	<p>Specializing in Java, with extensive experience in Python, JavaScript and C++</p>
+        	<span class="fas fa-power-off logo-small"></span>
+        	<h4 class="const-height">SOFTWARE ENGINEERING</h4>
+        	<p>Specializing in Java, with extensive experience in Python, C++ and JavaScript</p>
       	</div>
-		<div class="col-sm-4">
+		<div class="col-md-4 col-sm-6">
       		<span class="glyphicon glyphicon-signal logo-small"></span>
-      		<h4>DATA SCIENCE & DSP</h4>
+      		<span class="fas fa-signal logo-small"></span>
+      		<h4 class="const-height">DATA SCIENCE & DSP</h4>
       		<p>From biometric signals to traffic times, data is my speciality</p>
     	</div>
-    	<div class="col-sm-4">
+    	<div class="col-md-4 col-sm-6">
+      		<span class="fas fa-chart-bar logo-small"></span>
       		<span class="glyphicon glyphicon-stats logo-small"></span>
-      		<h4>AUDIO ENGINEERING</h4>
+      		<h4 class="const-height">AUDIO ENGINEERING</h4>
       		<p>Processing, feature extraction, and sound design</p>
     	</div>
-    </div>
-    <div class="row">
-    	<div class="col-sm-4">
+    	<div class="col-md-4 col-sm-6">
       		<span class="glyphicon glyphicon-certificate logo-small"></span>
-      		<h4>CLIENT RELATIONS</h4>
-      		<p>I believe great products start with knowing your customer</p>
+      		<span class="fas fa-certificate logo-small"></span>
+      		<h4 class="const-height">CLIENT RELATIONS</h4>
+      		<p style="align-self: flex-end;">I believe great products start with knowing your customer</p>
     	</div>
-    	<div class="col-sm-4">
+    	<div class="col-md-4 col-sm-6">
       		<span class="glyphicon glyphicon-blackboard logo-small"></span>
-      		<h4 style="line-height: 2.75em;">DESIGN</h4>
+      		<span class="fas fa-desktop logo-small"></span>
+        	<h4 class="const-height">DESIGN</h4>
       		<p>2D graphic, 3D model and Web/UI design</p>
     	</div>
-    	<div class="col-sm-4">
+    	<div class="col-md-4 col-sm-6">
       		<span class="glyphicon glyphicon-edit logo-small"></span>
-      		<h4>TECHNICAL WRITING</h4>
+      		<span class="fas fa-edit logo-small"></span>
+      		<h4 class="const-height">TECHNICAL WRITING</h4>
       		<p>Project proposals, project reporting, user manuals, etc.</p>
     	</div>
   	</div>
 </div>
 
-
 <!-- Portfolio -->
 <div id="portfolio" class="container-fluid bg-grey">
-	<h2>Portfolio</h2>
-  	<h4>My Creative Work</h4>
-  	<div class="row text-center slideanim">
-    	<div class="col-sm-4">
-      		<div class="thumbnail">
-        		<span class="glyphicon glyphicon-flash logo" style="margin: 0 -50%"></span>
-        		<p><strong>Tactile Waves</strong></p>
-        		<p>Sound-to-touch Java Library</p>
-                <p>Available <a href="https://funkatronics.github.io/TactileWaves/">here</a></p>
+	<div class="text-center">
+		<h2>Portfolio</h2>
+  		<h4>Past and Current Projects</h4>
+	</div>
+  	<div class="card-deck slideanim">
+    	<div class="card mb-4 btn" type="button" data-toggle="modal" data-target="#cthulhuModal">
+			<img class="card-img-top" src="res/CS.png" alt="Cthulhu Shield">
+			<div class="card-body">
+				<h5 class="card-title">The Cthulhu Shield</h5>
+				<h6 class="card-subtitle">Sensory Substitution Platform</h6>
+                <hr>
+				<p class="card-text">audio/visual prosthetics and sensory augmentation</p>
+			</div>
+		</div>
+    	<div class="card mb-4 btn" type="button" data-toggle="modal" data-target="#twModal">
+			<img class="card-img-top" src="res/TW.png" alt="Tactile Waves">
+			<div class="card-body">
+				<h5 class="card-title">Tactile Waves</h5>
+				<h6 class="card-subtitle">Audio Processing API</h6>
+                <hr>
+				<p class="card-text">a DSP library for a wide range of applications</p>
+			</div>   
+		</div> 
+        <div class="w-100 d-none d-sm-block d-lg-none"><!-- wrap every 2 on sm--></div>
+    	<div class="card mb-4 btn" type="button" data-toggle="modal" data-target="#m4lModal">
+			<img class="card-img-top" src="res/M4L.png" alt="M4L">
+			<div class="card-body">
+				<h5 class="card-title">Max for Live Plugins</h5>
+				<h6 class="card-subtitle">Free Ableton Live Plugins</h6>
+                <hr>
+				<p class="card-text">a collection of mixing, mastering, and performance utilities</p>
+			</div>
+		</div>
+		<div class="w-100 d-none d-lg-block"><!-- wrap every 3 on lg--></div>
+    	<div class="card mb-4 btn" type="button" data-toggle="modal" data-target="#lhdfModal">
+			<img class="card-img-top" src="res/LHDF.png" alt="LH Duo Filter">
+			<div class="card-body">
+				<h5 class="card-title">LH Duo Filter</h5>
+				<h6 class="card-subtitle">Free Performance VST</h6>
+                <hr>
+				<p class="card-text">custom dual mode filter for music performance and production</p>
+			</div>
+		</div>
+        <div class="w-100 d-none d-sm-block d-lg-none"><!-- wrap every 2 on sm--></div>
+    	<div class="card mb-4 btn" type="button" data-toggle="modal" data-target="#loveModal">
+			<img class="card-img-top" src="res/LOVE.png" alt="The Love Project">
+			<div class="card-body">
+				<h5 class="card-title">The Love Project</h5>
+				<h6 class="card-subtitle">Interactive Art Piece</h6>
+                <hr>
+				<p class="card-text">a massive stainless-steel statue by steel artist Rick Reider</p>
+			</div>
+		</div>
+    	<div class="card mb-4 btn" type="button" data-toggle="modal" data-target="#musicModal" >
+			<img class="card-img-top" src="res/Funkatronics_thumb.png" alt="Funkatronics">
+			<div class="card-body">
+				<h5 class="card-title">Music</h5>
+				<h6 class="card-subtitle">Funky Disco House</h6>
+                <hr>
+				<p class="card-text">available now on all streaming platforms</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Cthulhu Modal -->
+<div class="modal custom fade" id="cthulhuModal" tabindex="-1" role="dialog">
+  	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title" id="exampleModalLongTitle">The Cthulhu Shield</h5>
+        		<button type="button" class="close custom" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        		</button>
       		</div>
-    	</div>
-    	<div class="col-sm-4">
-      		<div class="thumbnail">
-      			<span class="glyphicon glyphicon-headphones logo" style="margin: 0 -50%"></span>
-        		<p><strong>Music</strong></p>
-        		<p>Funky Disco House</p>
-                <p>Check it out on <a href="https://soundcloud.com/funk4science">soundcloud</a></p>
+      		<div class="modal-body">
+                <div class="container-fluid-dialog">
+                	<div class="row">
+                    	<a href="http://sapienllc.com/">
+                        	<img border="0" alt="Cthulhu Shield" src="res/CS_V1.gif"  height="300">
+                        </a>
+						<a href="https://www.youtube.com/watch?v=vBUp2dJDEKc">
+                        	<img border="0" alt="Cthulhu Shield Live Sound" src="res/CS_V2.gif"  height="300">
+                        </a>
+                    </div>
+                    <div class="row">
+                    	<p>Since 2015, I have been working closely with Sapien, LLC and Colorado State Unversity to develop a sound-to-touch sensory substituion platform. Using hardware built by Sapien, I have created research software tools, demonstration apps, example code, and a Java API (see Tactile Waves) to help our multidisciplinary team create non-invasive auditory prosthetics. With the sucessful launch of the Cthulhu Shield Kickstarter, the project has grown to include other types of sensory replacement and augmentation, as well. For more information on the Cthulhu hardware, visit <a href="https://www.kickstarter.com/projects/2007440405/cthulhu-shield?ref=discovery&term=Cthulhu">Sapien's kickstarter page</a>.</p>
+						<p>Most recently, I created 2 example/demonstration apps that show how to use the Cthulhu Shield with an Android device. The <a href="https://play.google.com/store/apps/details?id=funkatronics.code.cthulhucamerademo">first app</a> captures video from the device camera, and finds regions of motion within each frame, and activates a Cthulhu device in response to this motion, giving a low-resolution tactile "T-Rex Vision". The second app uses Tactile Waves to capture audio and extract formant frequencies in real-time. These frequencies are used to create stimulation patterns on the Cthulhu, yeilding "tactile sound" on the users tongue. Source code for both applications is available <a href="https://github.com/SapienLLCdev/Cthulhu/tree/master/Android%20Examples">here.</a></p>
+                    </div>
+                </div>
+            </div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="http://sapienllc.com/" class="btn btn-info" role="button">View Website</a>
       		</div>
-    	</div>
-    	<div class="col-sm-4">
-      		<div class="thumbnail">
-      			<span class="glyphicon glyphicon-wrench logo" style="margin: 0 -50%"></span>
-        		<p><strong>M4L Plugins</strong></p>
-                <p>Free plugins for Ableton Live </p>
-                <p>Download <a href="http://maxforlive.com/profile/user/Funkatronics">here</a></p>
+		</div>
+	</div>
+</div>
+
+<!-- Tactile Waves Modal -->
+<div class="modal custom fade" id="twModal" tabindex="-1" role="dialog">
+  	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title" id="exampleModalLongTitle">Tactile Waves</h5>
+        		<button type="button" class="close custom" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        		</button>
       		</div>
-    	</div>
+      		<div class="modal-body">
+                <div class="container-fluid-dialog">
+                    <div class="row">
+                            <a href="https://www.instagram.com/p/BuASM8mA0-Y/">
+                            <img border="0" alt="Tactile Waves VJ Ex1" src="res/TW_VJ1.gif"  height="300">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p>Tactile Waves in an open source Android/Java library for audio processing, feature extraction, and sound-to-touch sensory substitution. Originally developed as a sensory substiution research and development tool, the project has evolved into a comprehensive audio/speech processing library for music visualization, VJing, audio FX, and other creative audio work. Currently, I am porting elements of the library to C++, and have begun work on version 2.0, which will include some exciting new features and algorithms. I also have plans to build a version of the library for <a href="https://processing.org/">Processing</a> so users can more easily build Java programs that take advantage of Tactile Waves' powerful audio engine.</p>
+                        <p>This project has a <a href="https://funkatronics.github.io/TactileWaves">dedicated website</a> with links to documentation, downloads, and source code.</p>
+                    </div>
+                </div>
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="https://funkatronics.github.io/TactileWaves" class="btn btn-info" role="button">View Website</a>
+      		</div>
+		</div>
+	</div>
+</div>
+
+<!-- M4L Modal -->
+<div class="modal custom fade" id="m4lModal" tabindex="-1" role="dialog">
+  	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title" id="exampleModalLongTitle">Max For Live Plugins</h5>
+        		<button type="button" class="close custom" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        		</button>
+      		</div>
+      		<div class="modal-body">
+                <div class="container-fluid-dialog">
+                    <div class="row">
+                    	<a href="http://www.maxforlive.com/library/device/4662/mix-matcher">
+                            <img border="0" alt="Mix Matcher" src="res/M4L1.jpg"  height="150">
+                        </a>
+                        <a href="http://www.maxforlive.com/library/device/5005/loudness-meter">
+                            <img border="0" alt="Loudness Meter" src="res/M4L2.jpg"  height="150">
+                        </a>
+                        <a href="http://www.maxforlive.com/library/device/4686/goniometer">
+                            <img border="0" alt="Goniometer" src="res/M4L3.jpg"  height="150">
+                        </a>
+                        <a href="http://www.maxforlive.com/library/device/4687/vu-meter">
+                            <img border="0" alt="VU Meter" src="res/M4L4.jpg"  height="150">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p>For the past several years, I have been developing free plugins for Ableton Live, using <a href="https://cycling74.com/products/maxforlive">Max For Live.</a> With these plugins, I aim to provide advanced signal processing techniques that would otherwise be out of reach for a typical Max user. My currently available plugins include a suit of mixing and mastering tools for phase correlation, perceived loudness metering, volume metering, and spectral referencing. A custom DJ control surface for the <a href="https://www.ableton.com/en/push/">Push 2</a> and similar pad based controllers is currently in development, as well as a motion tracking modulator that converts motion from a video source to parameter automations.</p>
+                        <p> Visit my Max for Live <a href="http://www.maxforlive.com/profile/user/Funkatronics">developer page</a> for more info and downloads.</p>
+                    </div>
+                </div>
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="http://www.maxforlive.com/profile/user/Funkatronics" class="btn btn-info" role="button">View Website</a>
+      		</div>
+		</div>
+	</div>
+</div>
+
+<!-- LH Duo Filter Modal -->
+<div class="modal custom fade" id="lhdfModal" tabindex="-1" role="dialog">
+  	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title" id="exampleModalLongTitle">LH Duo Filter</h5>
+        		<button type="button" class="close custom" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        		</button>
+      		</div>
+      		<div class="modal-body">
+                <div class="container-fluid-dialog">
+                    <div class="row">
+                    	<a href="https://www.instagram.com/p/BuASM8mA0-Y/">
+                            <img border="0" alt="LH Duo Filter" src="res/LHDF.png"  height="300">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p>LH Duo Filter is my first publically available audio plugin (VST). This plugin implements a custom dual-mode low/high-pass filter using <a href="https://juce.com/">JUCE.</a> Turning the CUTOFF control clockwise will apply a 12 dB/octave high-pass filter to the signal with an increasing cutoff frequency. Similarly, turning counter-clockwise will apply a low-pass filter with decreasing cutoff frequency. The MODE switch will toggle between two different filter types. The first is a clean biquad filter (from Tactile Waves), and the second is an oversampled state variable filter with added saturation/waveshaping. The RES knob can be used to control the filter resonance, while the LINK switch will allow the resonance to be adjusted automatically, according to the CUTOFF position.</p>
+                        <p>This plugin is perfect for live performance/DJing. During buildups and transitions, low or high-pass filtering can be applied to a sound using just one knob, freeing up the performers hands and controls for other effects. It is also useful in the studio, as its fully automatable parameters allow for precise control of filter sweeps in an arrangment. Because of the plugin's low performace overhead, it can be thrown on several tracks in one session without using up available resources. </p>
+                        <p>FREE downloads and source code coming soon!</p>
+                    </div>
+                </div>
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="http://www.maxforlive.com/profile/user/Funkatronics" class="btn btn-info disabled" role="button">View Website</a>
+      		</div>
+		</div>
+	</div>
+</div>
+
+<!-- Love Project Modal -->
+<div class="modal custom fade" id="loveModal" tabindex="-1" role="dialog">
+  	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title" id="exampleModalLongTitle">The Love Project</h5>
+        		<button type="button" class="close custom" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        		</button>
+      		</div>
+      		<div class="modal-body">
+                <div class="container-fluid-dialog">
+                    <div class="row">
+                        <a href="https://www.rickreider.com/the-love-project">
+                            <img border="0" alt="LOVE Statue 1" src="res/LOVE1.png" height="300">
+                        </a>
+                        <a href="https://www.rickreider.com/the-love-project">
+                            <img border="0" alt="LOVE Statue 2" src="res/LOVE2.png" height="300">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="https://www.rickreider.com/the-love-project">
+                            <img border="0" alt="LOVE Statue 3" src="res/LOVE3.jpg" height="300">
+                        </a>
+                        <a href="https://www.rickreider.com/the-love-project">
+                            <img border="0" alt="LOVE Statue 4" src="res/LOVE4.jpg" height="300">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p>The Love Project is a massive mirror-finished stainless steel statue conceptualized by Fort Collins steel artist <a href="https://www.rickreider.com/">Rick Reider.</a> I worked with Rick over the past few years to help bring his creation to life. Starting with 2D drawings and 3D CAD models, I helped Rick design each letter to be visually pleasing, structurally sound, and manufacturable. I then created photorealistic renderings and 3D printed models (pictured above) to visualize the design, and finally DXF cutting files for the guys at <a href="http://coloradowaterjet.com/">Colorado Waterjet.</a> The statue is currently being manufactred in Rick's Fort Collins workshop. More information on this project can be found on Rick's website <a href="https://www.rickreider.com/the-love-project">here.</a></p>
+                    </div>
+                </div>
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="https://www.rickreider.com/the-love-project" class="btn btn-info" role="button">View Website</a>
+      		</div>
+		</div>
+	</div>
+</div>
+
+<!-- Music Modal -->
+<div class="modal custom fade" id="musicModal" tabindex="-1" role="dialog">
+  	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title" id="exampleModalLongTitle">Funkatronics</h5>
+        		<button type="button" class="close custom" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        		</button>
+      		</div>
+      		<div class="modal-body">
+                <div class="container-fluid-dialog">
+                    <div class="row justify-content-center">
+                        <a href="https://open.spotify.com/artist/2dwk4UfQgkV9ed4Yr30eXS">
+                            <img border="0" alt="Funkatronics" src="res/funkatronics.png" height="300" style="background: #000; padding: 15px; border-radius: 15px">
+                        </a>
+                    </div>
+                    <div class="row justify-content-center">
+                        <h5>Funky Disco House Music</h5>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p>Available now on all streaming platforms</p>
+                        <iframe width="100%" height="96" src="https://song.link/embed?url=https://song.link/i/1453364172" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="https://open.spotify.com/artist/2dwk4UfQgkV9ed4Yr30eXS" class="btn btn-info" role="button">View Spotify Artist Page</a>
+      		</div>
+		</div>
 	</div>
 </div>
 
 <!-- Contact -->
-<div id="contact" class="container-fluid text-left bg-grey">
+<div id="contact" class="container-fluid text-left bg-light-grey">
 	<h2><a name="contact"/>CONTACT</h2>
   	<div class="row">
     	<div class="col-sm-6">
-      		<p>Drop me a note:</p>
-      		<p><span class="glyphicon glyphicon-map-marker logo-small"></span> Denver, CO </p>
-      		<p><span class="glyphicon glyphicon-envelope logo-small"></span> martinez.marco567@gmail.com</p>
+      		<h6>Drop me a note:</h6>
+      		<p><span class="fas fa-map-marker logo-small"></span> Denver, CO </p>
+      		<p><span class="fas fa-envelope logo-small"></span> martinez.marco567@gmail.com</p>
     	</div>
     	<div class="col-sm-6 slideanim">
         	<form action="https://formspree.io/martinez.marco567@gmail.com" method="POST">
@@ -348,9 +651,9 @@
   	</div>
 </div>
 
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-center" style="background-color: #232642;">
 	<a href="#myPage" title="To Top">
-    	<span class="glyphicon glyphicon-chevron-up"></span>
+    	<span class="fas fa-chevron-up"></span>
   	</a>
 </footer>
 
