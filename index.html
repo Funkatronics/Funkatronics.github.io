@@ -67,6 +67,10 @@
     		background-color: #e3e094;
     		color: #232642;
 		}
+        img {
+    		max-width: 100%;
+    		max-height: 100%;
+		}
   		.navbar {
     		margin-bottom: 0;
     		background-color: #232642;
@@ -132,13 +136,16 @@
         	padding: 0;
             text-align: inherit;
         }
-        /*.modal.custom {
-    		outline: none;
-  			z-index: 100000;
-            margin: 75px auto;
-		}*/
+        .list-group-item {
+        	background-color: #505595; 
+        }
+        .modal-backdrop {
+    		z-index: 10000 !important;
+  		}
+        .modal.custom {
+    		z-index: 10001 !important;
+		}
 		.modal.custom .modal-dialog {
-    		margin: 75px auto;
         	color: #232642;
 		}
         .modal-body {
@@ -149,7 +156,6 @@
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             border: none;
-        
         }
         .modal-title {
         	color: #e3e094;
@@ -245,7 +251,7 @@
 	</style>
     <!-- Gumroad Styling -->
     <style> 
-    	.gumroad-follow-form-embed { zoom: 1; } 
+    	.gumroad-follow-form-embed { zoom: 1; padding-bottom: 25px;} 
         .gumroad-follow-form-embed:before, .gumroad-follow-form-embed:after { display: table; line-height: 0; content: ""; } 
         .gumroad-follow-form-embed:after { clear: both; } 
         .gumroad-follow-form-embed * { margin: 0; border: 0; padding: 0; outline: 0; box-sizing: border-box !important; float: left !important; } 
@@ -417,6 +423,54 @@
 	</div>
 </div>
 
+<!-- Services -->
+<div id="services" class="container-fluid bg-light-grey text-center">
+	<div class="text-center">
+		<h2>On Demand Services</h2>
+  		<p>*Services based on availability, with pricing provided on a per contract basis. For larger contracts (e.g. software development), please use the <a href="#contact">contact form.</a></p>
+	</div>
+  	<div class="card-deck slideanim">
+    	<div class="card mb-4">
+  			<h5 class="card-header">Education</h5>
+			<div class="card-body">
+    			<p class="card-text">Learn music production through <a href="https://learnivore.com/">Learnivore.com</a> with an experienced instructor and a personalized lesson plan.</p>
+  			</div>
+            <div class="card-footer">
+    			<a href="https://learnivore.com/instructors/colorado-music-teacher-with-msc-in-audio-engineering" class="card-link">Book Now</a>
+  			</div>
+		</div>
+    	<div class="card mb-4">
+  			<h5 class="card-header">Mastering</h5>
+			<div class="card-body">
+    			<p class="card-text">Audio mastering for online streaming by a trained Engineer with an MS in Audio Engineering.</p>
+  			</div>
+            <div class="card-footer">
+    			<a href="#quoteModal" data-toggle="modal" data-target="#quoteModal" data-extra="Mastering" class="card-link">Request Quote</a>
+  			</div>
+		</div>
+        <div class="w-100 d-none d-sm-block d-xl-none"><!-- wrap every 2--></div>
+    	<div class="card mb-4">
+  			<h5 class="card-header">Music Visualizers</h5>
+			<div class="card-body">
+    			<p class="card-text">Add a custom visualizer video to your Instagram or YouTube campaign, perfecty synchronized to your music.</p>
+  			</div>
+            <div class="card-footer">
+    			<a href="#quoteModal" data-toggle="modal" data-target="#quoteModal" data-extra="Music Visualizer" class="card-link">Request Quote</a>
+  			</div>
+		</div>
+    	<div class="card mb-4">
+  			<h5 class="card-header">Graphic Design</h5>
+			<div class="card-body">
+    			<p class="card-text">Bring your brand to life with custom designs for your logo, cover art, user interface, or social media.</p>
+  			</div>
+            <div class="card-footer">
+    			<a href="#quoteModal" data-toggle="modal" data-target="#quoteModal" data-extra="Graphic Design" class="card-link">Request Quote</a>
+  			</div>
+		</div>
+        <div class="w-100 d-none d-sm-block d-xl-none"><!-- wrap every 2--></div>
+	</div>
+</div>
+
 <!-- Cthulhu Modal -->
 <div class="modal custom fade" id="cthulhuModal" tabindex="-1" role="dialog">
   	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -429,17 +483,17 @@
       		</div>
       		<div class="modal-body">
                 <div class="container-fluid-dialog">
-                	<div class="row">
+                	<div class="row d-block">
                     	<a href="http://sapienllc.com/">
-                        	<img border="0" alt="Cthulhu Shield" src="res/CS_V1.gif"  height="300">
+                        	<img border="0" alt="Cthulhu Shield" src="res/CS_V1.gif" width="28%">
                         </a>
 						<a href="https://www.youtube.com/watch?v=vBUp2dJDEKc">
-                        	<img border="0" alt="Cthulhu Shield Live Sound" src="res/CS_V2.gif"  height="300">
+                        	<img border="0" alt="Cthulhu Shield Live Sound" src="res/CS_V2.gif" width="71%">
                         </a>
                     </div>
                     <div class="row">
                     	<p>Since 2015, I have been working closely with Sapien, LLC and Colorado State Unversity to develop a sound-to-touch sensory substituion platform. Using hardware built by Sapien, I have created research software tools, demonstration apps, example code, and a Java API (see Tactile Waves) to help our multidisciplinary team create non-invasive auditory prosthetics. With the sucessful launch of the Cthulhu Shield Kickstarter, the project has grown to include other types of sensory replacement and augmentation, as well. For more information on the Cthulhu hardware, visit <a href="https://www.kickstarter.com/projects/2007440405/cthulhu-shield?ref=discovery&term=Cthulhu">Sapien's kickstarter page</a>.</p>
-						<p>Most recently, I created 2 example/demonstration apps that show how to use the Cthulhu Shield with an Android device. The <a href="https://play.google.com/store/apps/details?id=funkatronics.code.cthulhucamerademo">first app</a> captures video from the device camera, and finds regions of motion within each frame, and activates a Cthulhu device in response to this motion, giving a low-resolution tactile "T-Rex Vision". The second app uses Tactile Waves to capture audio and extract formant frequencies in real-time. These frequencies are used to create stimulation patterns on the Cthulhu, yeilding "tactile sound" on the users tongue. Source code for both applications is available <a href="https://github.com/SapienLLCdev/Cthulhu/tree/master/Android%20Examples">here.</a></p>
+						<p>Most recently, I created 2 example/demonstration apps that show how to use the Cthulhu Shield with an Android device. The <a href="https://play.google.com/store/apps/details?id=funkatronics.code.cthulhucamerademo">first app</a> captures video from the device camera, finds regions of motion within each frame, and activates a Cthulhu device in response to this motion, giving a low-resolution tactile "T-Rex Vision". The second app uses Tactile Waves to capture audio and extract formant frequencies in real-time. These frequencies are used to create stimulation patterns on the Cthulhu, yeilding "tactile sound" on the users tongue. Source code for both applications is available <a href="https://github.com/SapienLLCdev/Cthulhu/tree/master/Android%20Examples">here.</a></p>
                     </div>
                 </div>
             </div>
@@ -463,14 +517,15 @@
       		</div>
       		<div class="modal-body">
                 <div class="container-fluid-dialog">
-                    <div class="row">
+                    <div class="row d-block text-center">
                             <a href="https://www.instagram.com/p/BuASM8mA0-Y/">
-                            <img border="0" alt="Tactile Waves VJ Ex1" src="res/TW_VJ1.gif"  height="300">
+                            <img border="0" alt="Tactile Waves VJ Ex1" src="res/TW_VJ1.gif" width="60%">
                         </a>
                     </div>
                     <div class="row">
-                        <p>Tactile Waves in an open source Android/Java library for audio processing, feature extraction, and sound-to-touch sensory substitution. Originally developed as a sensory substiution research and development tool, the project has evolved into a comprehensive audio/speech processing library for music visualization, VJing, audio FX, and other creative audio work. Currently, I am porting elements of the library to C++, and have begun work on version 2.0, which will include some exciting new features and algorithms. I also have plans to build a version of the library for <a href="https://processing.org/">Processing</a> so users can more easily build Java programs that take advantage of Tactile Waves' powerful audio engine.</p>
+                        <p>Tactile Waves in an open source Android/Java library for audio processing, feature extraction, and sound-to-touch sensory substitution. Originally developed as a sensory substitution research and development tool, the project has evolved into a comprehensive audio/speech processing library for music visualization, VJing, audio FX, and other creative audio work. Currently, I am porting elements of the library to C++, and have begun work on version 2.0, which will include some exciting new features and algorithms. I also have plans to build a version of the library for <a href="https://processing.org/">Processing</a> so users can more easily build Java programs that take advantage of Tactile Waves' powerful audio engine.</p>
                         <p>This project has a <a href="https://funkatronics.github.io/TactileWaves">dedicated website</a> with links to documentation, downloads, and source code.</p>
+                        <p>My corresponding thesis publication for this project is available <a href="https://search.proquest.com/docview/2115824188?pq-origsite=gscholar">here.</a></p>
                     </div>
                 </div>
       		</div>
@@ -494,22 +549,22 @@
       		</div>
       		<div class="modal-body">
                 <div class="container-fluid-dialog">
-                    <div class="row">
+                    <div class="row d-block text-center">
                     	<a href="http://www.maxforlive.com/library/device/4662/mix-matcher">
-                            <img border="0" alt="Mix Matcher" src="res/M4L1.jpg"  height="150">
+                            <img border="0" alt="Mix Matcher" src="res/M4L1.jpg" width="47.7%">
                         </a>
                         <a href="http://www.maxforlive.com/library/device/5005/loudness-meter">
-                            <img border="0" alt="Loudness Meter" src="res/M4L2.jpg"  height="150">
+                            <img border="0" alt="Loudness Meter" src="res/M4L2.jpg"  width="51.3%">
                         </a>
                         <a href="http://www.maxforlive.com/library/device/4686/goniometer">
-                            <img border="0" alt="Goniometer" src="res/M4L3.jpg"  height="150">
+                            <img border="0" alt="Goniometer" src="res/M4L3.jpg" width="23.885%">
                         </a>
                         <a href="http://www.maxforlive.com/library/device/4687/vu-meter">
-                            <img border="0" alt="VU Meter" src="res/M4L4.jpg"  height="150">
+                            <img border="0" alt="VU Meter" src="res/M4L4.jpg" width="75.115%">
                         </a>
                     </div>
                     <div class="row">
-                        <p>For the past several years, I have been developing free plugins for Ableton Live, using <a href="https://cycling74.com/products/maxforlive">Max For Live.</a> With these plugins, I aim to provide advanced signal processing techniques that would otherwise be out of reach for a typical Max user. My currently available plugins include a suit of mixing and mastering tools for phase correlation, perceived loudness metering, volume metering, and spectral referencing. A custom DJ control surface for the <a href="https://www.ableton.com/en/push/">Push 2</a> and similar pad based controllers is currently in development, as well as a motion tracking modulator that converts motion from a video source to parameter automations.</p>
+                        <p>For the past several years, I have been developing free plugins for Ableton Live, using <a href="https://cycling74.com/products/maxforlive">Max For Live.</a> With these plugins, I aim to provide advanced signal processing techniques that would otherwise be out of reach for a typical Max user. My currently available plugins include a suite of mixing and mastering tools for phase correlation, perceived loudness metering, volume metering, and spectral referencing. A custom DJ control surface for the <a href="https://www.ableton.com/en/push/">Push 2</a> and similar pad based controllers is currently in development, as well as a motion tracking modulator that converts motion from a video source to parameter automations.</p>
                         <p> Visit my Max for Live <a href="http://www.maxforlive.com/profile/user/Funkatronics">developer page</a> for more info and downloads.</p>
                     </div>
                 </div>
@@ -534,14 +589,14 @@
       		</div>
       		<div class="modal-body">
                 <div class="container-fluid-dialog">
-                    <div class="row">
+                    <div class="row d-block text-center">
                     	<a href="https://www.instagram.com/p/BuASM8mA0-Y/">
-                            <img border="0" alt="LH Duo Filter" src="res/LHDF.png"  height="300">
+                            <img border="0" alt="LH Duo Filter" src="res/LHDF.png" width="40%">
                         </a>
                     </div>
                     <div class="row">
-                        <p>LH Duo Filter is my first publically available audio plugin (VST). This plugin implements a custom dual-mode low/high-pass filter using <a href="https://juce.com/">JUCE.</a> Turning the CUTOFF control clockwise will apply a 12 dB/octave high-pass filter to the signal with an increasing cutoff frequency. Similarly, turning counter-clockwise will apply a low-pass filter with decreasing cutoff frequency. The MODE switch will toggle between two different filter types. The first is a clean biquad filter (from Tactile Waves), and the second is an oversampled state variable filter with added saturation/waveshaping. The RES knob can be used to control the filter resonance, while the LINK switch will allow the resonance to be adjusted automatically, according to the CUTOFF position.</p>
-                        <p>This plugin is perfect for live performance/DJing. During buildups and transitions, low or high-pass filtering can be applied to a sound using just one knob, freeing up the performers hands and controls for other effects. It is also useful in the studio, as its fully automatable parameters allow for precise control of filter sweeps in an arrangment. Because of the plugin's low performace overhead, it can be thrown on several tracks in one session without using up available resources. </p>
+                        <p>LH Duo Filter is my first publically available audio plugin (VST). This plugin implements a custom dual-mode low/high-pass filter using <a href="https://juce.com/">JUCE.</a> Turning the CUTOFF control clockwise will apply a 12 dB/octave high-pass filter to the signal with an increasing cutoff frequency. Similarly, turning counter-clockwise will apply a low-pass filter with decreasing cutoff frequency. The MODE switch will toggle between two different filter types. The first is a clean biquad filter (from Tactile Waves), and the second is a custom oversampled state variable filter with added saturation/waveshaping. The RES knob can be used to control the filter resonance, while the LINK switch will allow the resonance to be adjusted automatically, according to the CUTOFF position.</p>
+                        <p>This plugin is perfect for live performance/DJing. During buildups and transitions, low or high-pass filtering can be applied to a sound using just one knob, freeing up the performers hands and controls for other effects. It is also useful in the studio, as its fully automatable parameters allow for precise control of filter sweeps in an arrangement. Because of the plugin's low performance overhead, it can be thrown on several tracks in one session without using up available resources.</p>
                         <p>FREE downloads and source code coming soon!</p>
                     </div>
                 </div>
@@ -566,24 +621,24 @@
       		</div>
       		<div class="modal-body">
                 <div class="container-fluid-dialog">
-                    <div class="row">
+                    <div class="row d-block text-center">
                         <a href="https://www.rickreider.com/the-love-project">
-                            <img border="0" alt="LOVE Statue 1" src="res/LOVE1.png" height="300">
+                            <img border="0" alt="LOVE Statue 1" src="res/LOVE1.png" width="29.509%">
                         </a>
                         <a href="https://www.rickreider.com/the-love-project">
-                            <img border="0" alt="LOVE Statue 2" src="res/LOVE2.png" height="300">
+                            <img border="0" alt="LOVE Statue 2" src="res/LOVE2.png" width="30.49%">
+                        </a>
+                    </div>
+                    <div class="row d-block text-center">
+                        <a href="https://www.rickreider.com/the-love-project">
+                            <img border="0" alt="LOVE Statue 3" src="res/LOVE3.jpg" width="23.559%">
+                        </a>
+                        <a href="https://www.rickreider.com/the-love-project">
+                            <img border="0" alt="LOVE Statue 4" src="res/LOVE4.jpg" width="46.44%">
                         </a>
                     </div>
                     <div class="row">
-                        <a href="https://www.rickreider.com/the-love-project">
-                            <img border="0" alt="LOVE Statue 3" src="res/LOVE3.jpg" height="300">
-                        </a>
-                        <a href="https://www.rickreider.com/the-love-project">
-                            <img border="0" alt="LOVE Statue 4" src="res/LOVE4.jpg" height="300">
-                        </a>
-                    </div>
-                    <div class="row">
-                        <p>The Love Project is a massive mirror-finished stainless steel statue conceptualized by Fort Collins steel artist <a href="https://www.rickreider.com/">Rick Reider.</a> I worked with Rick over the past few years to help bring his creation to life. Starting with 2D drawings and 3D CAD models, I helped Rick design each letter to be visually pleasing, structurally sound, and manufacturable. I then created photorealistic renderings and 3D printed models (pictured above) to visualize the design, and finally DXF cutting files for the guys at <a href="http://coloradowaterjet.com/">Colorado Waterjet.</a> The statue is currently being manufactred in Rick's Fort Collins workshop. More information on this project can be found on Rick's website <a href="https://www.rickreider.com/the-love-project">here.</a></p>
+                        <p>The Love Project is a massive, mirror-finished stainless steel statue conceptualized by Fort Collins steel artist <a href="https://www.rickreider.com/">Rick Reider.</a> I worked with Rick over the past few years to help bring his creation to life. Starting with 2D drawings and 3D CAD models, I helped Rick design each letter to be visually pleasing, structurally sound, and manufacturable. I then created photorealistic renderings and 3D printed models (pictured above) to visualize the design, and finally DXF cutting files for the guys at <a href="http://coloradowaterjet.com/">Colorado Waterjet.</a> The statue is currently being manufactured in Rick's Fort Collins workshop. More information on this project can be found on Rick's website <a href="https://www.rickreider.com/the-love-project">here.</a></p>
                     </div>
                 </div>
       		</div>
@@ -607,9 +662,9 @@
       		</div>
       		<div class="modal-body">
                 <div class="container-fluid-dialog">
-                    <div class="row justify-content-center">
+                    <div class="row d-block text-center">
                         <a href="https://open.spotify.com/artist/2dwk4UfQgkV9ed4Yr30eXS">
-                            <img border="0" alt="Funkatronics" src="res/funkatronics.png" height="300" style="background: #000; padding: 15px; border-radius: 15px">
+                            <img border="0" alt="Funkatronics" src="res/funkatronics.png" width="90%" style="background: #000; padding: 15px; border-radius: 15px">
                         </a>
                     </div>
                     <div class="row justify-content-center">
@@ -629,18 +684,66 @@
 	</div>
 </div>
 
+<!-- Quote Modal -->
+<div class="modal custom fade" id="quoteModal" tabindex="-1" role="dialog">
+  	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title" id="exampleModalLongTitle">Request a Quote</h5>
+        		<button type="button" class="close custom" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        		</button>
+      		</div>
+      		<div class="modal-body">
+                <div class="container-fluid-dialog">
+                	<div class="row px-2"><h6>Enter your name, email, and a short description of your request:</h6></div>
+                    <div class="row justify-content-center">
+        				<form action="https://formspree.io/martinez.marco567@gmail.com" method="POST" id="quoteForm" width="650px">
+							<input type="hidden" name="_subject" value="Quote Request from Personal Website"/>
+							<input type="hidden" name="_format" value="plain"/>
+							<input type="hidden" name="_next" value="thankyou.html"/>
+							<div class="row">
+								<div class="col-sm-12 form-group">
+									<input size="100" class="form-control" name="subject" placeholder="Subject" type="text" required/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 form-group">
+									<input class="form-control" name="name" placeholder="Name" type="text" required autofocus/>
+								</div>
+								<div class="col-sm-6 form-group">
+									<input class="form-control" name="email" placeholder="Email" type="email" required/>
+								</div>
+							</div>
+							<textarea class="form-control" name="comments" placeholder="Additional details..." rows="5"></textarea>
+						</form>
+                    </div>
+                </div>
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<input class="btn btn-default" type="submit" form="quoteForm" value="Send">
+      		</div>
+		</div>
+	</div>
+</div>
+
 <!-- Contact -->
-<div id="contact" class="container-fluid text-left bg-light-grey">
+<div id="contact" class="container-fluid text-left bg-grey">
 	<h2><a name="contact"/>CONTACT</h2>
   	<div class="row">
     	<div class="col-sm-6">
-      		<h6>Drop me a note:</h6>
       		<p style="margin-bottom: 10px;"><span class="align-text-top fas fa-map-marker logo-small"></span> Denver, CO </p>
       		<p><span class="align-text-top fas fa-envelope logo-small"></span> martinez.marco567@gmail.com</p>
             <h6>Follow me on Gumroad:</h6>
-            <form action="https://gumroad.com/follow_from_embed_form" class="form gumroad-follow-form-embed" method="post"> <input name="seller_id" type="hidden" value="9356630913199"> <input name="email" placeholder="Your email address" type="email"> <button data-custom-highlight-color="" type="submit">Follow</button> </form>
+            <form action="https://gumroad.com/follow_from_embed_form" class="form gumroad-follow-form-embed" method="post"> 
+            	<input name="seller_id" type="hidden" value="9356630913199"> 
+                <input name="email" placeholder="Your email address" type="email"> 
+                <button data-custom-highlight-color="" type="submit">Follow</button> 
+            </form>
     	</div>
     	<div class="col-sm-6 slideanim">
+      		<h6>Drop me a note:</h6>
         	<form action="https://formspree.io/martinez.marco567@gmail.com" method="POST">
 				<input type="hidden" name="_subject" value="New Contact from Your Personal Web Page"/>
 				<input type="hidden" name="_format" value="plain"/>
@@ -655,9 +758,9 @@
 				</div>
 				<textarea class="form-control" name="comments" placeholder="Comment" rows="5" required></textarea>
 				<br>
-				<div class="row">
+				<div class="row text-center">
 					<div class="col-sm-12 form-group">
-						<input class="btn btn-default pull-right" type="submit" value="Send">
+						<input class="w-50 btn btn-default" type="submit" value="Send">
 					</div>
 				</div>
 			</form>
@@ -672,6 +775,15 @@
 </footer>
 
 <script>
+	$('#quoteModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var service = button.data('extra') // Extract info from data-* attributes
+        // Update the modal's content. 
+        var modal = $(this)
+        modal.find('.modal-title').text('Request ' + service + ' Quote')
+        $('[name=subject]').val('Quote Request: ' + service)
+        //modal.find('.modal-body input').val(service)
+    })
 	$(document).ready(function(){
   		// Add smooth scrolling to all links in navbar + footer link
   		$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
